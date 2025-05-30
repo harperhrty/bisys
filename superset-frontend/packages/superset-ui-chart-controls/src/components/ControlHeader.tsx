@@ -18,9 +18,7 @@
  */
 import { ReactNode } from 'react';
 import { t, css } from '@superset-ui/core';
-import { InfoCircleOutlined } from '@ant-design/icons';
-import { InfoTooltipWithTrigger } from './InfoTooltipWithTrigger';
-import { Tooltip } from './Tooltip';
+import { Icons, InfoTooltip, Tooltip } from '@superset-ui/core/components';
 
 type ValidationError = string;
 
@@ -61,7 +59,7 @@ export function ControlHeader({
         <span>
           {description && (
             <span>
-              <InfoTooltipWithTrigger
+              <InfoTooltip
                 label={t('description')}
                 tooltip={description}
                 placement="top"
@@ -71,7 +69,7 @@ export function ControlHeader({
           )}
           {renderTrigger && (
             <span>
-              <InfoTooltipWithTrigger
+              <InfoTooltip
                 label={t('bolt')}
                 tooltip={t('Changing this control takes effect instantly')}
                 placement="top"
@@ -106,7 +104,7 @@ export function ControlHeader({
           {warning && (
             <span>
               <Tooltip id="error-tooltip" placement="top" title={warning}>
-                <InfoCircleOutlined
+                <Icons.InfoCircleOutlined
                   css={theme => css`
                     font-size: ${theme.sizeUnit * 3}px;
                     color: ${theme.colorError};
@@ -118,7 +116,7 @@ export function ControlHeader({
           {danger && (
             <span>
               <Tooltip id="error-tooltip" placement="top" title={danger}>
-                <InfoCircleOutlined
+                <Icons.InfoCircleOutlined
                   css={theme => css`
                     font-size: ${theme.sizeUnit * 3}px;
                     color: ${theme.colorError};
@@ -134,7 +132,7 @@ export function ControlHeader({
                 placement="top"
                 title={validationErrors.join(' ')}
               >
-                <InfoCircleOutlined
+                <Icons.InfoCircleOutlined
                   css={theme => css`
                     font-size: ${theme.sizeUnit * 3}px;
                     color: ${theme.colorError};

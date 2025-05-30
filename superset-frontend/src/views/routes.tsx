@@ -138,6 +138,12 @@ const UsersList: LazyExoticComponent<any> = lazy(
   () => import(/* webpackChunkName: "UsersList" */ 'src/pages/UsersList'),
 );
 
+const UserRegistrations = lazy(
+  () =>
+    import(
+      /* webpackChunkName: "UserRegistrations" */ 'src/pages/UserRegistrations'
+    ),
+);
 const Login = lazy(
   () => import(/* webpackChunkName: "Login" */ 'src/pages/Login'),
 );
@@ -259,6 +265,10 @@ export const routes: Routes = [
   {
     path: '/sqllab/',
     Component: SqlLab,
+  },
+  {
+    path: '/registrations/',
+    Component: UserRegistrations,
   },
 ];
 

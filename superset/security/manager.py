@@ -2797,7 +2797,7 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         for view in list(self.appbuilder.baseviews):
             if isinstance(view, self.rolemodelview.__class__) and getattr(
                 view, "route_base", None
-            ) in ["/roles", "/users"]:
+            ) in ["/roles", "/users", "/registrations"]:
                 self.appbuilder.baseviews.remove(view)
 
         security_menu = next(
@@ -2805,5 +2805,5 @@ class SupersetSecurityManager(  # pylint: disable=too-many-public-methods
         )
         if security_menu:
             for item in list(security_menu.childs):
-                if item.name in ["List Roles", "List Users"]:
+                if item.name in ["List Roles", "List Users", "User Registrations"]:
                     security_menu.childs.remove(item)

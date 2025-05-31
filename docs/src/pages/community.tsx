@@ -26,7 +26,7 @@ import BlurredSection from '../components/BlurredSection';
 
 const communityLinks = [
   {
-    url: 'http://bit.ly/join-superset-slack',
+  url: 'https://bit.ly/join-superset-slack',
     title: 'Slack',
     description: 'Interact with other Superset users and community members.',
     image: 'slack-symbol.jpg',

@@ -9,7 +9,7 @@ body:
 
         🚨 Reporting a security issue: send an email to security@superset.apache.org. DO NOT USE GITHUB ISSUES TO REPORT SECURITY PROBLEMS.
         🐛 Reporting a bug: use this form.
-        🙏 Asking a question or getting help: post in the [Superset Slack chat](http://bit.ly/join-superset-slack) or [GitHub Discussions](https://github.com/apache/superset/discussions) under "Q&A / Help".
+        🙏 Asking a question or getting help: post in the [Superset Slack chat](https://bit.ly/join-superset-slack) or [GitHub Discussions](https://github.com/apache/superset/discussions) under "Q&A / Help".
         💡 Requesting a new feature: Search [GitHub Discussions](https://github.com/apache/superset/discussions) to see if it exists already. If not, add a new post there under "Ideas".
   - type: textarea
     id: bug-description
